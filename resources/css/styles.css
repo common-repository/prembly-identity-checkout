@@ -1,0 +1,261 @@
+.id-modal {
+  display: none; 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,.8);
+  overflow: auto;
+  z-index: 20000;
+}
+
+.card-body
+{
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.form-control
+{
+    padding: 15px;
+    border: 1px solid #dcdcdd;
+    width: 85%;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.card-form
+{
+    margin-left: 30px;
+    margin-top: 4%;
+}
+
+.card-label
+{
+    font-size: 12px;
+    color: gray;
+}
+
+.btn
+{
+    padding: 10px;
+    background-color: #1633a3;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 85%;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+.btn:hover
+{
+    box-shadow: 0px 0px 5px 0px gray;
+    border: 3px solid #fff;
+}
+
+.btn:active
+{
+    box-shadow: 0px 0px 5px 0px #fff;
+    border: 3px solid #fff;
+}
+
+.card-close
+{
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #1633a3;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    color: #1633a3;
+}
+
+.dash_display
+{
+    display: inline-flex;
+}
+
+@media screen and ( min-width: 200px )
+{
+  .card {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    animation-name: id-modalbox;
+    animation-duration: .4s;
+    animation-timing-function: cubic-bezier(0,0,.3,1.6);
+    box-shadow: 0px 0px 50px 0px #000;
+    height: 100%;
+  }
+}
+
+@media screen and ( min-width: 700px )
+{
+  .card {
+    padding-top: 2%;
+    position: absolute;
+    width: 500px;
+    margin-top: 0%;
+    left: 37%;
+    background-color: #fff;
+    animation-name: id-modalbox;
+    animation-duration: .4s;
+    animation-timing-function: cubic-bezier(0,0,.3,1.6);
+    /* border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 60%; */
+  }
+}
+
+@keyframes id-modalbox {
+  0% {
+    top: -250px; 
+    opacity: 0;
+  }
+  100% {
+    top: 0; 
+    opacity: 1;
+  }
+}
+
+.idx_x_verification *:focus {
+  outline: none;
+}
+
+.idx_x_verification {
+  background-color: #efefef;
+  padding: 15px 70px;
+  font-family: "Open Sans", "Arial", snas-serif;
+  overflow: hidden;
+}
+
+.idx_x_verification .input-group {
+  display: block;
+/*   width: 441px; */
+  max-width: 100%;
+  height: 67px;
+  border: 0;
+  background-color: #ffffff;
+  /* border-bottom-left-radius: 21px;
+  border-bottom-right-radius: 21px;
+  border-top-left-radius: 21px;
+  border-top-right-radius: 21px; */
+  border-radius: 16px;
+  box-shadow: 0 17px 40px 0 rgba(75, 128, 182, 0.07);
+  margin-bottom: 22px;
+  position: relative;
+  font-size: 17px;
+  color: #a7b4c1;
+  transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out,
+    box-shadow 0.1s ease-in-out;
+}
+
+.idx_x_verification .group-select {
+    width: 441px!important;
+}
+
+.idx_x_verification select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  text-indent: 0.01px;
+  appearance: none;
+  background-image: none;
+  text-overflow: '';
+}
+
+.idx_x_verification select::-ms-expand {
+  display: none;
+}
+
+
+.idx_x_verification .input-group:hover {
+  box-shadow: 0 14px 44px 0 rgba(0, 0, 0, 0.077);
+}
+
+.idx_x_verification .input-group input, .idx_x_verification .input-group select {
+  position: absolute;
+  border: 0;
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0);
+  top: 0;
+  height: 63px;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+  z-index: 3;
+  display: block;
+  /* color: #1a6fc4; */
+  font-size: 17px;
+  font-family: "Oxygen", sans-serif;
+  transition: top 0.1s ease-in-out;
+}
+
+/* .idx_x_verification .input-group select {
+
+} */
+
+.idx_x_verification .input-group input::placeholder, .idx_x_verification .input-group select::placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+
+.idx_x_verification .input-group input:focus,
+.idx_x_verification .input-group input:not(:placeholder-shown), .idx_x_verification .input-group select:focus,
+.idx_x_verification .input-group select:not(:placeholder-shown) {
+  top: 9px;
+}
+
+.idx_x_verification .input-group label {
+  position: absolute;
+  border: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+  transition: all 0.1s ease-in-out;
+  cursor: text;
+}
+
+.idx_x_verification .input-group input:focus + label,
+.idx_x_verification .input-group input:not(:placeholder-shown) + label, .idx_x_verification .input-group select:focus + label,
+.idx_x_verification .input-group select:not(:placeholder-shown) + label {
+  bottom: 27px;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.idx_x_verification .padlock-mark {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  right: 33px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 22px;
+  color: #e0e0e0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.idx_x_verification p.submit input.button-primary  {
+  overflow: hidden;
+	width: 220px;
+	-webkit-transition: border-color 0.3s, color 0.3s;
+	transition: border-color 0.3s, color 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
